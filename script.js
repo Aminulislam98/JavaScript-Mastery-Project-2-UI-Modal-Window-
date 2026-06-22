@@ -19,3 +19,12 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 btnClosed.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (event) {
+  // closing the modal when Escape button is clicked ;
+  if (event.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  }
+});
